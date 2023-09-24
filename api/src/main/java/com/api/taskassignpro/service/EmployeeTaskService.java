@@ -27,7 +27,7 @@ public class EmployeeTaskService {
 
     public List<EmployeeTaskDTO> findAllEmployeeTask() {
         List<EmployeeTask> employeeTasks = repository.findAll();
-        List<EmployeeTaskDTO> employeeTaskDTOS = new ArrayList<EmployeeTaskDTO>();
+        List<EmployeeTaskDTO> employeeTaskDTOS = new ArrayList<>();
 
         for (EmployeeTask employeeTask : employeeTasks) {
             EmployeeTaskDTO employeeTaskDTO = new EmployeeTaskDTO(

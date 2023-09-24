@@ -1,7 +1,5 @@
 package com.api.taskassignpro.service;
 
-import com.api.taskassignpro.model.employee.Employee;
-import com.api.taskassignpro.model.employee.EmployeeDTO;
 import com.api.taskassignpro.model.task.Task;
 import com.api.taskassignpro.model.task.TaskDTO;
 import com.api.taskassignpro.repository.TaskRepository;
@@ -29,7 +27,7 @@ public class TaskService {
 
     public List<TaskDTO> findAllTask() {
         List<Task> tasks = repository.findAll();
-        List<TaskDTO> taskDTOS = new ArrayList<TaskDTO>();
+        List<TaskDTO> taskDTOS = new ArrayList<>();
 
         for (Task task : tasks) {
             TaskDTO taskDTO = new TaskDTO(
