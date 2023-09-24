@@ -52,11 +52,15 @@ public class EmployeeService {
 
     // PUT
 
-    public void updateEmployee(EmployeeDTO dto, Long id) {
+    public void updateEmployee(EmployeeDTO dto, Long id) throws Exception {
         Employee employee = repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Not found employee with id " + id));
         BeanUtils.copyProperties(dto, employee);
 
-        repository.save(employee);
+        try {
+            repository.save(employee);
+        }catch (Exception e) {
+            throw new Exception("Error in the content sent");
+        }
     }
 
     // DELETE
