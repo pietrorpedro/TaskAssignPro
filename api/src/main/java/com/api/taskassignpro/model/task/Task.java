@@ -1,9 +1,13 @@
 package com.api.taskassignpro.model.task;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "task")
+@Getter
+@Setter
 public class Task {
 
     @Id
