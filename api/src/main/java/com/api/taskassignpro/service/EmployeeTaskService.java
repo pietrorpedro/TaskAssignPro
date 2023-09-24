@@ -39,6 +39,34 @@ public class EmployeeTaskService {
         return employeeTaskDTOS;
     }
 
+    public List<EmployeeTaskDTO> findByEmployeeId(Long id) {
+        List<EmployeeTask> employeeTasks = repository.findByEmployeeId(id);
+        List<EmployeeTaskDTO> employeeTaskDTOS = new ArrayList<>();
+
+        for (EmployeeTask employeeTask : employeeTasks) {
+            EmployeeTaskDTO employeeTaskDTO = new EmployeeTaskDTO(
+                    employeeTask.getEmployeeId(),
+                    employeeTask.getTaskId()
+            );
+            employeeTaskDTOS.add(employeeTaskDTO);
+        }
+        return employeeTaskDTOS;
+    }
+
+    public List<EmployeeTaskDTO> findByTaskId(Long id) {
+        List<EmployeeTask> employeeTasks = repository.findByTaskId(id);
+        List<EmployeeTaskDTO> employeeTaskDTOS = new ArrayList<>();
+
+        for (EmployeeTask employeeTask : employeeTasks) {
+            EmployeeTaskDTO employeeTaskDTO = new EmployeeTaskDTO(
+                    employeeTask.getEmployeeId(),
+                    employeeTask.getTaskId()
+            );
+            employeeTaskDTOS.add(employeeTaskDTO);
+        }
+        return employeeTaskDTOS;
+    }
+
     // POST
 
     public void saveEmployeeTask(EmployeeTaskDTO dto) {
