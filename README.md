@@ -11,9 +11,8 @@ TaskAssignPro é uma aplicação web de gerenciamento de tarefas projetada para 
 
 ## Tecnologias Utilizadas
 
-- **Front-End:** Desenvolvido com [React](https://reactjs.org/) para a criação da interface de usuário.
 - **Back-End:** Utiliza [Java Spring Boot](https://spring.io/) para o desenvolvimento do back-end.
-- **Estilização:** [TailwindCSS](https://tailwindcss.com/) é usado para estilizar a interface de usuário, proporcionando um design moderno e responsivo.
+
 
 ## Contribuição
 
